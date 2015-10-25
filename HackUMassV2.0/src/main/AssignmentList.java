@@ -1,9 +1,10 @@
 package main;
 
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
-import java.util.TreeSet;
+
 
 import support.InputMapper;
 import support.Tuple;
@@ -14,7 +15,7 @@ public class AssignmentList{
 	public AssignmentList(Comparator<Assignment> comp){
 		
 	}
-	Set<Assignment> main = new TreeSet<Assignment>();
+	Set<Assignment> main = new HashSet<Assignment>();
 	
 	public void add(Assignment toAdd){
 		main.add(toAdd);

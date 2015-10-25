@@ -40,14 +40,18 @@ public class ChatManager {
 		if(tup.second == 0){print("There are No Assignments to Do Today.");}
 		else {
 			print("Assignments that Should we worked on today.");
-			for(int i = 0; i < tup.second; i++) print(tup.first[i].toString());
+			for(int i = 0; i < tup.second; i++) {
+				print(tup.first[i].toString() + "\n");
+			}
 		}
 		
 	}
 	
 	public void printList(Assignment[] list){
 		print("Current Assignments: ");
-		for(int i = 0; i < list.length; i++) print(list[i].toString());
+		for(int i = 0; i < list.length; i++) {
+			print(list[i].toString() + "\n");
+		}
 	}
 	
 	public void print(String toPrint){

@@ -51,18 +51,28 @@ public class InputMapper {
 	
 	private Map<String, Boolean> makeDefaultDatabase(){
 		Map<String, Boolean> def = new HashMap<String, Boolean>();
-		def.put(toCode(2,0,0), true);
-		def.put(toCode(2,1,0), true);
+		//Days, Type, Percent
+		def.put(toCode(0,1,30), true);
+		def.put(toCode(0,2,0), true);
 		
-		def.put(toCode(3,2,80), true);
-		def.put(toCode(3,3,10), true);
+		def.put(toCode(1,2,70), true);
+		def.put(toCode(2,2,25), true);
+		def.put(toCode(3,2,0), true);
 		
-		def.put(toCode(4,3,10), true);
+		def.put(toCode(3,3,50), true);
+		def.put(toCode(1,3,0), true);
 		
-		def.put(toCode(5,1,60), true);
-		def.put(toCode(5,2,80), true);
-		def.put(toCode(5,3,10), true);
-		def.put(toCode(5,4,0), true);
+		def.put(toCode(1,4,60), true);
+		def.put(toCode(2,4,45), true);
+		def.put(toCode(3,4,20), true);
+		def.put(toCode(4,4,0), true);
+		
+		def.put(toCode(1,5,85), true);
+		def.put(toCode(2,5,70), true);
+		def.put(toCode(3,5,45), true);
+		def.put(toCode(4,5,30), true);
+		def.put(toCode(5,5,10), true);
+		def.put(toCode(6,5,0), true);
 		
 		return def;
 	}
@@ -95,9 +105,9 @@ public class InputMapper {
 	}
 	
 	public void addToDatabase(int d, int t, int p){
-		for(int a = d; a >= 0; a--){ //For every Day from today to that Day
+		for(int a = 0; a <= d; a++){ //For every Day from today to that Day
 			for(int b = t; b <= 5; b++){ //For Every Type that has a bigger Priority
-				for(int c = p; c >= 0; c--){ // For every Assignment that is less done
+				for(int c = 0; c <= p; c++){ // For every Assignment that is less done
 					//System.out.println("Adding: " + "X"+a+"X"+b+"X"+c);
 					DataBase.put(toCode(a,b,c), true);
 				}

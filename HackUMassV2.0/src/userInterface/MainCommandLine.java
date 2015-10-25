@@ -43,7 +43,7 @@ public class MainCommandLine {
 			case "close": keepGoing = false; break;
 			case "add": AList.add(add(input)); break;
 			case "database": map.additionalQuestions(5);
-			default: chat.error(toHelp); break;
+			default: break;
 			}
 		}
 		input.close();
